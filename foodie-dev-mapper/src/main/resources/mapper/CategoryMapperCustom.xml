@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.mrcode.foodiedev.mapper.CategoryMapperCustom">
-    <resultMap id="myCategoryVO" type="cn.mrcode.foodiedev.pojo.vo.CategoryVO">
+<mapper namespace="com.ablejava.foodiedev.mapper.CategoryMapperCustom">
+    <resultMap id="myCategoryVO" type="com.ablejava.foodiedev.pojo.vo.CategoryVO">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="type" property="type"/>
         <result column="fatherId" property="fatherId"/>
-        <collection property="subCatList" ofType="cn.mrcode.foodiedev.pojo.vo.SubCategoryVO">
+        <collection property="subCatList" ofType="com.ablejava.foodiedev.pojo.vo.SubCategoryVO">
             <id column="subId" property="subId"/>
             <result column="subName" property="subName"/>
             <result column="subType" property="subType"/>
             <result column="subFatherId" property="subFatherId"/>
         </collection>
     </resultMap>
-    <resultMap id="myNewItemVo" type="cn.mrcode.foodiedev.pojo.vo.NewItemsVo">
+    <resultMap id="myNewItemVo" type="com.ablejava.foodiedev.pojo.vo.NewItemsVo">
         <id column="rootCatId" property="rootCatId"/>
         <result column="rootCatName" property="rootCatName"/>
         <result column="slogan" property="slogan"/>
         <result column="catImage" property="catImage"/>
         <result column="bgColor" property="bgColor"/>
-        <collection property="simpleItemList" ofType="cn.mrcode.foodiedev.pojo.vo.SimpleItemVO">
+        <collection property="simpleItemList" ofType="com.ablejava.foodiedev.pojo.vo.SimpleItemVO">
             <id column="itemId" property="itemId"/>
             <result column="itemName" property="itemName"/>
             <result column="itemUrl" property="itemUrl"/>

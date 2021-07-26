@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.mrcode.foodiedev.mapper.ItemsMapperCustom">
-    <select id="queryItemComments" parameterType="Map" resultType="cn.mrcode.foodiedev.pojo.vo.ItemCommentVO">
+<mapper namespace="com.ablejava.foodiedev.mapper.ItemsMapperCustom">
+    <select id="queryItemComments" parameterType="Map" resultType="com.ablejava.foodiedev.pojo.vo.ItemCommentVO">
         SELECT ic.comment_level as commentLevel,
                 ic.content       as content,
                 ic.sepc_name     as specName,
@@ -15,7 +15,7 @@
             AND ic.comment_level = #{paramsMap.level}
         </if>
     </select>
-    <select id="searchItems" parameterType="Map" resultType="cn.mrcode.foodiedev.pojo.vo.SearchItemsVO">
+    <select id="searchItems" parameterType="Map" resultType="com.ablejava.foodiedev.pojo.vo.SearchItemsVO">
         select i.id          as        itemId,
                i.item_name   as        itemName,
                i.sell_counts as        sellCounts,
@@ -48,7 +48,7 @@
 <!--    c: 根据效率排序-->
 <!--    p: 根据价格排序-->
 <!--    quot: 是双引号转义，使用单引号会被识别为数字类型，格式化报错，因为一个字母 char 可以识别为是数字-->
-    <select id="searchItemsByThirdCat" parameterType="Map" resultType="cn.mrcode.foodiedev.pojo.vo.SearchItemsVO">
+    <select id="searchItemsByThirdCat" parameterType="Map" resultType="com.ablejava.foodiedev.pojo.vo.SearchItemsVO">
         select i.id          as        itemId,
         i.item_name   as        itemName,
         i.sell_counts as        sellCounts,
@@ -79,7 +79,7 @@
         </choose>
     </select>
 
-    <select id="queryItemsBySpecIds" parameterType="List" resultType="cn.mrcode.foodiedev.pojo.vo.ShopcartVO">
+    <select id="queryItemsBySpecIds" parameterType="List" resultType="com.ablejava.foodiedev.pojo.vo.ShopcartVO">
         SELECT t_items.id                  as itemId,
                t_items.item_name           as itemName,
                t_items_img.url             as itemImgUrl,

@@ -13,7 +13,7 @@
             <!-- tk mapper 生成时使用插件方式为每个生成的 mapper 继承 tk mapper 的类
                  需要注意的是：该 mapper 是需要你拷贝到你的 mapper 项目中去的，但是还不能让 项目中的 tk mapper 扫描到该类
              -->
-            <property name="mappers" value="cn.mrcode.foodiedev.my.mapper.MyMapper"/>
+            <property name="mappers" value="MyMapper"/>
         </plugin>
 
 <!--        &lt;!&ndash; 指定自定义的注释添加实现 &ndash;&gt;-->
