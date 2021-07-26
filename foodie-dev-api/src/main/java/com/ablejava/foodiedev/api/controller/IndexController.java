@@ -39,6 +39,11 @@ public class IndexController {
         return JSONResult.ok(carousels);
     }
 
+    /**
+     * 第一次刷新主页查询大分类，渲染展示到主页
+     * 如果已经存在子分类，不再加载(懒加载)
+     * @return
+     */
     @ApiOperation(value = "获取商品一级分类")
     @GetMapping("/cats")
     public JSONResult cats() {
