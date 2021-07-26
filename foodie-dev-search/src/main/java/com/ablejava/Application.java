@@ -1,4 +1,4 @@
-package com.ablejava.foodiedev;
+package com.ablejava;
 
 
 import org.springframework.boot.SpringApplication;
@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 import tk.mybatis.spring.annotation.MapperScan;
 
-@SpringBootApplication(scanBasePackages = {"com.ablejava", "org.n3r.idworker"}, exclude = {SecurityAutoConfiguration.class})
-@MapperScan("cn.ablejava.foodiedev.mapper")
-@EnableRedisHttpSession // 启用redis作为spring session
+@SpringBootApplication
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

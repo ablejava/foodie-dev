@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource                # 数据源类型：HikariCP
+    driver-class-name: com.mysql.cj.jdbc.Driver             # 数据源的相关配置
+    url: jdbc:mysql://localhost:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    username: root
+    password: root
+  data:
+    elasticsearch:
+      cluster-name: es6
+      cluster-nodes: 192.168.1.187:9300

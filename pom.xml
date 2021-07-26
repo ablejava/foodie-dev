@@ -17,6 +17,7 @@
         <module>foodie-dev-api</module>
         <module>foodie-sso</module>
         <module>foodie-payment</module>
+        <module>foodie-dev-search</module>
     </modules>
 
 
